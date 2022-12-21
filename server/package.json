@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "lint": "eslint"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +14,8 @@
   "dependencies": {
     "body-parser": "^1.20.1",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "eslint": "^8.30.0",
     "express": "^4.18.2",
     "pg": "^8.8.0"
   }
