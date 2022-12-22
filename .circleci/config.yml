@@ -26,7 +26,10 @@ jobs:
           command: cat package.json
       - run:
           name: client-package.json
-          command: cd client && cat package.json 
+          command: cd client && cat package.json
+      - run:
+          name: client-install
+          command: npm run client:install
 workflows:
   frontend-build-and-deploy:
     jobs:
