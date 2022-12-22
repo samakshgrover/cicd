@@ -16,8 +16,14 @@ jobs:
           aws-secret-access-key: Secret_access_key
           aws-region: AWS_REGION
       - run:
+          name: echo-test-directory
+          command: pwd
+      - run:
           name: working-directory
-          command: pwd && ls
+          command: pwd
+      - run:
+          name: folder-structure
+          command: ls
 workflows:
   frontend-build-and-deploy:
     jobs:
