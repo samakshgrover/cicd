@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "client:install": "cd client && npm run install",
+    "client:install": "cd client && npm install",
     "client:build": "cd client && npm run install",
     "client:deploy": "cd client && npm run deploy"
   },
