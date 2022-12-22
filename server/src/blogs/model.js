@@ -32,7 +32,7 @@ class BlogsModel {
     try {
       const sql = 'select * from blog_table where id=$1';
       const { rows } = await client.query(sql, [id]);
-      return rows;
+      return rows[0];
     } catch (err) {
       throw new Error(
         `An Error found while getting blog data from blog_table ${err}`
