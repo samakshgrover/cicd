@@ -16,8 +16,12 @@ jobs:
           aws-secret-access-key: Secret_access_key
           aws-region: AWS_REGION
       - run:
+          name: working directory
+          command: echo "currunt directory"
+          command: pwd
+      - run:
           name: client-install
-          command: | 
+          command: |
             npm run client:install
       - run:
           name: client-build
