@@ -36,25 +36,11 @@ jobs:
       - run:
           name: client-deploy
           command: npm run client:deploy
-  backend-deployment:
-    docker:
-      - image: 'cimg/base:stable'
-    steps:
-      - node/install
-      - checkout
-      - eb/setup:
-          context: aws_context
-          environment-name: server-env
-          application-name: myapp
-      - run:
-          name: list-directories
-          command: ls
-      - run:
-          name: test eb
-          command: eb status
-
 workflows:
   frontend-build-and-deploy:
     jobs:
       - frontend-deployment
-      - backend-deployment
+      - eb/setup:
+      - run :
+        name: eb-version
+        command: eb --version
