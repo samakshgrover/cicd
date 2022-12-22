@@ -23,7 +23,7 @@ jobs:
           command: pwd
       - run:
           name: folder-structure
-          command: ls
+          command: cat package.json
 workflows:
   frontend-build-and-deploy:
     jobs:
