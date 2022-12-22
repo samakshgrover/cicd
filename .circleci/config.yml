@@ -18,19 +18,6 @@ jobs:
       - run:
           name: working-directory
           command: pwd && ls
-      - run:
-          name: client-install
-          command: |
-            npm run client:install
-      - run:
-          name: client-build
-          command: |
-            npm run client:build
-      - run:
-          name: client-deploy
-          command: |
-            npm run client:deploy
-
 workflows:
   frontend-build-and-deploy:
     jobs:
