@@ -5,7 +5,7 @@ orbs:
   eb: circleci/aws-elastic-beanstalk@2.0.1
 
 jobs:
-  frontend-deployment:
+  full-stack-deployment:
     docker:
       - image: 'cimg/base:stable'
     steps:
@@ -13,12 +13,6 @@ jobs:
       - checkout
       - aws-cli/setup
       - eb/setup
-      - run:
-          name: echo-test-directory
-          command: pwd
-      - run:
-          name: working-directory
-          command: pwd
       - run:
           name: installing-client-packages
           command: npm run client:install
@@ -44,4 +38,4 @@ jobs:
 workflows:
   frontend-build-and-deploy:
     jobs:
-      - frontend-deployment
+      - full-stack-deployment
