@@ -12,9 +12,7 @@ jobs:
       - node/install
       - checkout
       - aws-cli/setup:
-          aws-access-key-id: Access_key_ID
-          aws-secret-access-key: Secret_access_key
-          aws-region: AWS_REGION
+          context: aws_context
       - eb/setup
       - run:
           name: echo-test-directory
