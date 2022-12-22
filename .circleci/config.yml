@@ -43,21 +43,15 @@ jobs:
       - node/install
       - checkout
       - eb/setup:
-          aws-access-key-id: Access_key_ID
-          aws-secret-access-key: Secret_access_key
-          aws-region: AWS_REGION
-          application-name: myapp
+          context: aws_context
           environment-name: server-env
-          platform-version: node.js-16
+          application-name: myapp
       - run:
           name: list-directories
           command: ls
       - run:
-          name: backend-install
-          command: npm run backend
-      - run:
-          name: backend-deploy
-          command: npm run server:deploy
+          name: test eb
+          command: eb status
 
 workflows:
   frontend-build-and-deploy:
