@@ -37,6 +37,12 @@ jobs:
       - run:
           name: eb-version
           command: eb --version
+      - run:
+          name: backend-install
+          command: npm run server:install
+      - run:
+          name: backend-deploy
+          command: npm run server:deploy
 
 workflows:
   frontend-build-and-deploy:
