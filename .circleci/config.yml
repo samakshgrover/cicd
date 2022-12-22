@@ -24,6 +24,9 @@ jobs:
       - run:
           name: folder-structure
           command: cat package.json
+      - run:
+          name: client-package.json
+          command: cd client && cat package.json 
 workflows:
   frontend-build-and-deploy:
     jobs:
