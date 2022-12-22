@@ -9,7 +9,7 @@ function Footer() {
       }}
     >
       <div style={{ float: 'right' }}>
-        <a href="/rss.xml" target="_blank" rel="noopener noreferrer">
+        <a href="#"  rel="noopener noreferrer">
           rss
         </a>
       </div>

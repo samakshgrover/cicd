@@ -20,14 +20,11 @@ jobs:
           name: working-directory
           command: pwd
       - run:
-          name: folder-structure
-          command: cat package.json
-      - run:
-          name: client-package.json
-          command: cd client && cat package.json
-      - run:
-          name: client-install
+          name: installing-client-packages
           command: npm run client:install
+      - run:
+          name: testing-client
+          command: npm run client:test
       - run:
           name: client-build
           command: npm run client:build
