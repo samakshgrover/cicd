@@ -6,7 +6,7 @@ const blogRouter = require('./src/blogs/router');
 const PORT = process.env.PORT | 8080;
 
 app.get('/', (req, res) => {
-  res.send(`working`);
+  res.send(`circle ci working`);
 });
 
 app.get('/data', (req, res) => {
