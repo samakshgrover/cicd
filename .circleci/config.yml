@@ -36,13 +36,11 @@ jobs:
       - run:
           name: client-deploy
           command: npm run client:deploy
-
   backend-deployment:
     docker:
       - image: 'cimg/base:stable'
     steps:
       - node/install
-      - backend-deployment
       - checkout
       - eb/setup:
           aws-access-key-id: Access_key_ID
