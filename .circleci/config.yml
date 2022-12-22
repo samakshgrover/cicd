@@ -11,14 +11,8 @@ jobs:
     steps:
       - node/install
       - checkout
-      - aws-cli/setup:
-          aws-access-key-id: AWS_ACCESS_KEY
-          aws-secret-access-key: AWS_SECRET_KEY
-          aws-region: AWS_REGION
-      - eb/setup:
-          aws-access-key-id: AWS_ACCESS_KEY
-          aws-secret-access-key: AWS_SECRET_KEY
-          aws-region: AWS_REGION
+      - aws-cli/setup
+      - eb/setup
       - run:
           name: echo-test-directory
           command: pwd
@@ -40,7 +34,7 @@ jobs:
       - run:
           name: client-deploy
           command: npm run client:deploy
-      - run :
+      - run:
           name: eb-version
           command: eb --version
 
