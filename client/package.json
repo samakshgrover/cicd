@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "test":"echo \"No tests to run\" && exit 1",
     "build": "vite build",
     "preview": "vite preview",
     "deploy": "aws s3 cp --recursive dist/ s3://samaksh --acl public-read"
