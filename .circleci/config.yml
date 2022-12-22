@@ -34,9 +34,35 @@ jobs:
           name: client-build
           command: npm run client:build
       - run:
-          name: client-install
+          name: client-deploy
           command: npm run client:deploy
+
+  backend-deployment:
+    docker:
+      - image: 'cimg/base:stable'
+    steps:
+      - node/install
+      - backend-deployment
+      - checkout
+      - eb/setup:
+          aws-access-key-id: Access_key_ID
+          aws-secret-access-key: Secret_access_key
+          aws-region: AWS_REGION
+          application-name: myapp
+          environment-name: server-env
+          platform-version: node.js-16
+      - run:
+          name: list-directories
+          command: ls
+      - run:
+          name: backend-install
+          command: npm run backend
+      - run:
+          name: backend-deploy
+          command: npm run server:deploy
+
 workflows:
   frontend-build-and-deploy:
     jobs:
       - frontend-deployment
+      - backend-deployment
