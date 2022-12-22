@@ -13,9 +13,8 @@ jobs:
       - checkout
       - aws-cli/setup:
           aws-access-key-id: AWS_ACCESS_KEY
-          aws-secret-access-key: AWS_ACCESS_SECRET
-          aws-region: AWS_REGION_NAME
-      - eb/setup
+          aws-secret-access-key: AWS_SECRET_KEY
+          aws-region: AWS_REGION
       - run:
           name: echo-test-directory
           command: pwd
@@ -37,9 +36,7 @@ jobs:
       - run:
           name: client-deploy
           command: npm run client:deploy
-      - run:
-          name: eb-version
-          command: eb --version
+
 workflows:
   frontend-build-and-deploy:
     jobs:
