@@ -32,6 +32,6 @@ This application is to be hosted into **AWS** with Pipeline using **CircleCI**. 
 
 ## Documentation
 
-- Detailed Documentation is provided in `Docs/README.md`
-- Screenshots of the AWS configurations and the CircleCI are provided in `docs/screenshots/`
-- Architecture Diagrams of the AWS and the Pipeline are provided in `docs/Architecture Diagrams/`
+- Detailed Documentation is provided in `Docs/`
+- Screenshots of the AWS configurations and the CircleCI are provided in `screenshots/`
+- Architecture Diagrams of the AWS and the Pipeline are provided in `Architecture Diagrams/`
