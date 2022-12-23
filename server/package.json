@@ -8,7 +8,8 @@
     "start": "node app.js",
     "dev": "nodemon app.js",
     "lint": "eslint",
-    "deploy": "eb deploy server-env --staged"
+    "deploy": "eb deploy server-env --staged",
+    "eb:setenv": "eb setenv PGUSER=${PGUSER} PGHOST=${PGHOST} PGPASSWORD=${PGPASSWORD} PGDATABASE=${PGDATABASE} PGPORT=${PGPORT}"
   },
   "keywords": [],
   "author": "",

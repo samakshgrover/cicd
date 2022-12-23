@@ -10,7 +10,7 @@
     "client:test": "cd client && npm run test",
     "server:install": "cd server && npm install",
     "server:deploy": "cd server && npm run deploy",
-    "server:setenv": "eb setenv PGUSER=${PGUSER} PGHOST=${PGHOST} PGPASSWORD=${PGPASSWORD} PGDATABASE=${PGDATABASE} PGPORT=${PGPORT}"
+    "server:setenv": "cd server && npm run eb:setenv"
   },
   "keywords": [],
   "author": "",
