@@ -1,6 +1,6 @@
 # AWS Infrastructure
 
-![]()
+![](/Architecture%20Diagrams/aws.png)
 
 ## RDS
 

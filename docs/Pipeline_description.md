@@ -1,6 +1,6 @@
 # Pipeline
 
-![]()
+![](/Architecture%20Diagrams/pipeline.png)
 
 1. push code to Git main branch will trigger to run the jobs.
 2. this pipeline has a full-stack-deployment job.
