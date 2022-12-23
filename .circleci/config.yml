@@ -32,11 +32,14 @@ jobs:
           name: backend-install
           command: npm run server:install
       - run:
+          name: elastic-beanstalk-environment-variables
+          command: npm run server:setenv
+      - run:
           name: backend-deploy
           command: npm run server:deploy
 
 workflows:
-  frontend-build-and-deploy:
+  fullstack-build-and-deploy:
     jobs:
       - full-stack-deployment:
           filters:
