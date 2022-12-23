@@ -38,4 +38,8 @@ jobs:
 workflows:
   frontend-build-and-deploy:
     jobs:
-      - full-stack-deployment
+      - full-stack-deployment:
+          filters:
+            branches:
+              only:
+                - main
